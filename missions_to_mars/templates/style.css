@@ -1,0 +1,30 @@
+h1{
+    font-weight: bold;
+}
+
+h3{
+    font-weight: bold;
+}
+
+h4{
+    font-weight: bold;
+}
+
+body{
+    background-color: white;
+}
+
+.container1 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container2 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.minifig {
+    width: 550px;
+    height: 550px;
+}

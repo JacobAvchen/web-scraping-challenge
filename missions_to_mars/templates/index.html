@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Info</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/templates/style.css"/>
+</head>
+
+<body>
+  <div class="container text-center">
+    <div class="jumbotron">
+        <h1>Mission to Mars</h1>
+        <div>
+          <a class="btn btn-primary" href="/scrape" role="button">Scrape New Info!</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="Col_container container1">
+
+  <h3>Latest Mars News</h3>
+  <h4>{{ info.first_title }}</h4>
+  <p>{{ info.first_para }}</p>
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Featured Mars Image</h3>
+      </div>
+      <div class="col-md-4">
+        <h3>Current Weather on Mars</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <figure>
+          <img class="img-fluid" src={{ info.featured_image }} alt="featuredimage">
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <p>{{ info.weather }}</p>
+        <br>
+        <h3>Mars Info</h3>
+        <br>
+        <table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Value</th>    </tr>    <tr>      <th>Category</th>      <th></th>    </tr>  </thead>  <tbody>    <tr>      <th>Equatorial Diameter:</th>      <td>6,792 km</td>    </tr>    <tr>      <th>Polar Diameter:</th>      <td>6,752 km</td>    </tr>    <tr>      <th>Mass:</th>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <th>Moons:</th>      <td>2 (Phobos &amp; Deimos)</td>    </tr>    <tr>      <th>Orbit Distance:</th>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <th>Orbit Period:</th>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <th>Surface Temperature:</th>      <td>-87 to -5 °C</td>    </tr>    <tr>      <th>First Record:</th>      <td>2nd millennium BC</td>    </tr>    <tr>      <th>Recorded By:</th>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="Col_container container2 text-center">
+
+    <h3>Mars Hemispheres</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <figure>
+          <img class="img-fluid minifig" src={{ info.hemisphere_pics[0].img_url }} alt="hemisphereone">
+        </figure>
+      </div>
+
+      <div class="col-md-6">
+        <figure>
+          <img class="img-fluid minifig" src={{ info.hemisphere_pics[1].img_url }} alt="hemispheretwo">
+        </figure>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>{{ info.hemisphere_pics[0].title }}</h3>
+      </div>
+
+      <div class="col-md-6">
+        <h3>{{ info.hemisphere_pics[1].title }}</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <figure>
+          <img class="img-fluid minifig" src={{ info.hemisphere_pics[2].img_url }} alt="hemispherethree">
+        </figure>
+      </div>
+
+      <div class="col-md-6">
+        <figure>
+          <img class="img-fluid minifig" src={{ info.hemisphere_pics[3].img_url }} alt="hemispherefour">
+        </figure>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>{{ info.hemisphere_pics[2].title }}</h3>
+      </div>
+
+      <div class="col-md-6">
+        <h3>{{ info.hemisphere_pics[3].title }}</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
